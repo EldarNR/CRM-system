@@ -1,5 +1,5 @@
 <template>
-    <section class=" bg-white">
+    <section class=" flex bg-white">
         <div class="flex min-h-screen w-full flex-col">
 
             <div class="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
@@ -70,40 +70,10 @@
                         <Input type="search" placeholder="Search..."
                             class="w-full rounded-lg  pl-8 md:w-[200px] lg:w-[320px]" />
                     </div>
-                    <DropdownMenu>
-                        <DropdownMenuTrigger as-child>
-                            <Button variant="secondary" size="icon" class="rounded-full">
-                                <CircleUser class="h-5 w-5" />
-                                <span class="sr-only">Toggle user menu</span>
-                            </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end">
-                            <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                            <DropdownMenuSeparator />
-                            <DropdownMenuItem>Settings</DropdownMenuItem>
-                            <DropdownMenuItem>Support</DropdownMenuItem>
-                            <DropdownMenuSeparator />
-                            <DropdownMenuItem>Logout</DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
                 </header>
                 <main class="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
                     <Tabs default-value="all">
                         <div class="flex items-center">
-                            <TabsList>
-                                <TabsTrigger value="all">
-                                    All
-                                </TabsTrigger>
-                                <TabsTrigger value="active">
-                                    Active
-                                </TabsTrigger>
-                                <TabsTrigger value="draft">
-                                    Draft
-                                </TabsTrigger>
-                                <TabsTrigger value="archived" class="hidden sm:flex">
-                                    Archived
-                                </TabsTrigger>
-                            </TabsList>
                             <div class="ml-auto flex items-center gap-2">
                                 <DropdownMenu>
                                     <DropdownMenuTrigger as-child>
@@ -148,63 +118,29 @@
                                         Manage your products and view their sales performance.
                                     </CardDescription>
                                 </CardHeader>
-                                <CardContent>
-                                    <Table>
-                                        <TableHeader>
-                                            <TableRow>
-                                                <TableHead>Name</TableHead>
-                                                <TableHead>Status</TableHead>
-                                                <TableHead class="hidden md:table-cell">
-                                                    Price
-                                                </TableHead>
-                                                <TableHead class="hidden md:table-cell">
-                                                    Total Sales
-                                                </TableHead>
-                                                <TableHead class="hidden md:table-cell">
-                                                    Created at
-                                                </TableHead>
-                                                <TableHead>
-                                                    <span class="sr-only">Actions</span>
-                                                </TableHead>
-                                            </TableRow>
-                                        </TableHeader>
-                                        <TableBody>
-                                            <TableRow>
-                                                <TableCell class="font-medium">
-                                                    Laser Lemonade Machine
-                                                </TableCell>
-                                                <TableCell>
-                                                    <Badge variant="outline">
-                                                        Draft
-                                                    </Badge>
-                                                </TableCell>
-                                                <TableCell class="hidden md:table-cell">
-                                                    $499.99
-                                                </TableCell>
-                                                <TableCell class="hidden md:table-cell">
-                                                    25
-                                                </TableCell>
-                                                <TableCell class="hidden md:table-cell">
-                                                    2023-07-12 10:42 AM
-                                                </TableCell>
-                                                <TableCell>
-                                                    <DropdownMenu>
-                                                        <DropdownMenuTrigger as-child>
-                                                            <Button aria-haspopup="true" size="icon" variant="ghost">
-                                                                <MoreHorizontal class="h-4 w-4" />
-                                                                <span class="sr-only">Toggle menu</span>
-                                                            </Button>
-                                                        </DropdownMenuTrigger>
-                                                        <DropdownMenuContent align="end">
-                                                            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                                                            <DropdownMenuItem>Edit</DropdownMenuItem>
-                                                            <DropdownMenuItem>Delete</DropdownMenuItem>
-                                                        </DropdownMenuContent>
-                                                    </DropdownMenu>
-                                                </TableCell>
-                                            </TableRow>
-                                        </TableBody>
-                                    </Table>
+                                <CardContent class="flex p-2 text-center">
+                                    <Card class="w-[300px]">
+                                        <CardHeader>
+                                            <CardTitle>Антикор</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            Жалоб:0
+                                        </CardContent>
+                                        <CardFooter>
+                                            <NuxtLink to="/1" class="grid gap-1 mx-auto">
+                                                <Button class="text-center bg-green-800">
+                                                    <Check /> Перейти
+                                                </Button>
+                                                <Button class=" text-center bg-red-500">
+                                                    Удалить
+                                                </Button>
+                                                <Button class="text-center bg-orange-800">
+                                                    Изменить
+                                                </Button>
+                                            </NuxtLink>
+                                        </CardFooter>
+
+                                    </Card>
                                 </CardContent>
                                 <CardFooter>
                                     <div class="text-xs text-muted-foreground">

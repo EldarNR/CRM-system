@@ -9,13 +9,17 @@
 
                 <ul class="mt-6 space-y-1">
                     <li>
-                        <a href="#"
+                        <NuxtLink to="/"
                             class="block rounded-lg  hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-2 text-sm font-medium ">
                             General
-                        </a>
+                        </NuxtLink>
                     </li>
-
-
+                    <li>
+                        <NuxtLink to="/reports"
+                            class="block rounded-lg  hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-2 text-sm font-medium ">
+                            Reports
+                        </NuxtLink>
+                    </li>
                 </ul>
             </div>
 

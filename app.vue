@@ -1,8 +1,8 @@
 <template>
   <NuxtLayout>
-    <sidebar class="w-[200px] float-start" />
-    <div class="container flex flex-col dark dark:bg-slate-800">
-      <NuxtPage class="p-2" />
+    <div class="flex ">
+      <sidebar class="float-start" />
+      <NuxtPage class="p-2 container" />
     </div>
   </NuxtLayout>
 </template>
